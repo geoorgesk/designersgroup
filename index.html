@@ -10,17 +10,47 @@
 </head>
 
 <body>
-    <header>
-        <h1>Designers Group</h1>
-        <p>Innovative Architecture & Elegant Design</p>
-    </header>
+   <div id="intro">
+  <span id="intro-left">Designers</span>
+  <span id="intro-right">Group</span>
+</div>
 
-    <nav>
+<!-- This will become your hamburger menu after intro -->
+<div id="menu-button" class="hidden">☰</div>
+<!-- Hamburger button -->
+<div id="hamburger" class="hidden">☰</div>
+
+<!-- Slide-out menu -->
+<div id="sidebar" class="sidebar hidden">
+  <button id="close-btn">✕</button>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+
+
+        <nav>
         <a href="#">Home</a>
         <a href="#projects">Projects</a>
         <a href="./about.html">About</a>
         <a href="#contact">Contact</a>
     </nav>
+
+
+
+
+    <header>
+        
+        <h1>Designers Group</h1>
+        <p>Innovative Architecture & Elegant Design</p>
+        
+    </header>
+
+
 
     <section class="hero">
         <div class="overlay">
@@ -69,5 +99,80 @@
         <p>&copy; 2025 Designers Group. All Rights Reserved.</p>
     </footer>
 </body>
+<script>
+  window.addEventListener('load', () => {
+    const intro = document.getElementById('intro');
+    const designers = document.getElementById('intro-designers');
+    const group = document.getElementById('intro-group');
+    const hamburger = document.getElementById('hamburger');
+
+    // Sidebar
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+
+    // Animate intro
+    setTimeout(() => {
+      designers.classList.add('move');
+      group.classList.add('move');
+    }, 1000);
+
+    setTimeout(() => {
+      group.classList.add('fade');
+    }, 3000);
+
+    setTimeout(() => {
+      intro.style.display = 'none';
+      hamburger.classList.remove('hidden');
+      hamburger.classList.add('show');
+    }, 4000);
+
+    // Open sidebar
+    hamburger.addEventListener('click', () => {
+      sidebar.classList.remove('hidden');
+      sidebar.classList.add('open');
+    });
+
+    // Close sidebar
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      setTimeout(() => {
+        sidebar.classList.add('hidden');
+      }, 400); // after animation
+    });
+  });
+</script>
+
+<script>
+  window.addEventListener('load', () => {
+    const intro = document.getElementById('intro');
+    const designers = document.getElementById('intro-designers');
+    const group = document.getElementById('intro-group');
+    const hamburger = document.getElementById('hamburger');
+
+    // Step 1: Move both to corners + resize
+    setTimeout(() => {
+      designers.classList.add('move');
+      group.classList.add('move');
+    }, 1000);
+
+    // Step 2: Fade out "Group"
+    setTimeout(() => {
+      group.classList.add('fade');
+    }, 3000);
+
+    // Step 3: Remove intro and show hamburger
+    setTimeout(() => {
+      intro.style.display = 'none';
+      hamburger.classList.remove('hidden');
+      hamburger.classList.add('show');
+    }, 4000);
+  });
+</script>
+
+
+
+
+
+
 
 </html>

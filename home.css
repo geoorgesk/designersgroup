@@ -109,6 +109,145 @@ nav a:hover {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
+/* Black screen intro */
+#intro {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: black;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  overflow: hidden;
+}
+
+/* Both words initially centered */
+#intro span {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: white;
+  position: absolute;
+  opacity: 1;
+  transition: transform 2s ease, font-size 2s ease, opacity 1s ease;
+}
+
+/* DESIGNERS – move top-left & resize */
+#intro-designers.move {
+  top: 1.5rem;
+  left: 2rem;
+  transform: translate(0, 0);
+  font-size: 1.4rem;
+}
+
+/* GROUP – move top-right & resize */
+#intro-group.move {
+  top: 1.5rem;
+  right: 2rem;
+  left: auto;
+  transform: translate(0, 0);
+  font-size: 1.4rem;
+}
+
+/* GROUP fades after moving */
+#intro-group.fade {
+  opacity: 0;
+}
+
+/* HAMBURGER menu appears after transition */
+#hamburger {
+  position: fixed;
+  top: 1.5rem;
+  left: 2rem;
+  font-size: 1.4rem;
+  color: white;
+  background: transparent;
+  border: none;
+  z-index: 9998;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+#hamburger.show {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+/* Hamburger button */
+#hamburger {
+  position: fixed;
+  top: 1.5rem;
+  left: 2rem;
+  font-size: 1.4rem;
+  color: white;
+  background: transparent;
+  border: none;
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  cursor: pointer;
+}
+
+#hamburger.show {
+  opacity: 1;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 280px;
+  height: 100%;
+  background: #111;
+  color: white;
+  padding: 2rem 1.5rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  transition: left 0.4s ease;
+  z-index: 9999;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.sidebar ul li {
+  margin-bottom: 1.2rem;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+/* Close button */
+#close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
+
+
 
 .footer {
     background: #111;

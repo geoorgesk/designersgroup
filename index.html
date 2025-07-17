@@ -1,178 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Designers Group | Architecture Firm</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designers Group Architecture</title>
     <link rel="stylesheet" href="home.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
-   <div id="intro">
-  <span id="intro-left">Designers</span>
-  <span id="intro-right">Group</span>
-</div>
-
-<!-- This will become your hamburger menu after intro -->
-<div id="menu-button" class="hidden">☰</div>
-<!-- Hamburger button -->
-<div id="hamburger" class="hidden">☰</div>
-
-<!-- Slide-out menu -->
-<div id="sidebar" class="sidebar hidden">
-  <button id="close-btn">✕</button>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#expertise">Expertise</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</div>
-
-
-
-        <nav>
-        <a href="#">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="./about.html">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-
-
-
-    <header>
-        
-        <h1>Designers Group</h1>
-        <p>Innovative Architecture & Elegant Design</p>
-        
-    </header>
-
-
-
-    <section class="hero">
-        <div class="overlay">
-            <h2>Crafting Spaces That Inspire</h2>
+    <div class="intro-screen">
+        <div class="title-container">
+            <div class="designers">DESIGNERS</div>
+            <div class="group">GROUP</div>
         </div>
-    </section>
+    </div>
 
-    <section class="section" id="projects">
-        <h3>Our Projects</h3>
-        <div class="projects">
-            <div class="project">
-                <img src="https://images.unsplash.com/photo-1600585154356-596af9009e62?auto=format&fit=crop&w=800&q=80" alt="Project 1">
-                <div class="project-content">
-                    <h4>Modern Villa</h4>
-                    <p>A serene and spacious modern living experience.</p>
+    <main class="main-content">
+        <header class="main-header">
+            <div class="tagline">EXCLUSIVE ARCHITECTURE SINCE 2008</div>
+            <div class="hamburger">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </div>
+        </header>
+
+        <section class="hero-section">
+            <h1 class="hero-title">We design spaces that inspire and transform</h1>
+            <p class="hero-description">
+                Our architectural philosophy combines functionality with aesthetics,
+                creating timeless structures that respect their environment while pushing boundaries.
+            </p>
+            <a href="#" class="view-projects">View Projects</a>
+        </section>
+
+        <section class="featured-projects">
+            <div class="project-card">
+                <img src="https://placehold.co/1920x1080" alt="Modern concrete and glass residence with cantilevered volumes overlooking a forest valley" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">Horizon House</h3>
+                    <p class="project-location">Switzerland</p>
                 </div>
             </div>
-            <div class="project">
-                <img src="https://images.unsplash.com/photo-1600585154016-7c97b0fbd9f6?auto=format&fit=crop&w=800&q=80" alt="Project 2">
-                <div class="project-content">
-                    <h4>Urban Office</h4>
-                    <p>Minimalist and productive workspace design.</p>
+            <div class="project-card">
+                <img src="https://placehold.co/1920x1080" alt="Urban skyscraper with geometric facade patterns reflecting the city lights at dusk" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">Nexus Tower</h3>
+                    <p class="project-location">New York</p>
                 </div>
             </div>
-            <div class="project">
-                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="Project 3">
-                <div class="project-content">
-                    <h4>Luxury Apartments</h4>
-                    <p>Elegant interiors with optimal space utilization.</p>
+            <div class="project-card">
+                <img src="https://placehold.co/1920x1080" alt="Cultural center with fluid organic forms and a woven bamboo exterior" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">Weave Center</h3>
+                    <p class="project-location">Bali</p>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="project-card">
+                <img src="https://placehold.co/1920x1080" alt="Minimalist cliffside retreat with horizontal lines blending into the coastal landscape" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">Edge Retreat</h3>
+                    <p class="project-location">California</p>
+                </div>
+            </div>
+        </section>
 
-    <section class="section" id="about">
-        <h3>About Us</h3>
-        <p>Designers Group is a leading architectural firm based in Kerala, committed to delivering innovative and functional spaces. We specialize in residential, commercial, and public architecture, blending creativity with sustainability.</p>
-    </section>
+        <footer>
+            <p>© 2023 DESIGNERS GROUP. All rights reserved.</p>
+        </footer>
+    </main>
 
-    <section class="section" id="contact">
-        <h3>Contact</h3>
-        <p>Email: info@designersgroup.com<br>Phone: +91 98765 43210<br>Location: Kochi, Kerala</p>
-    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Start the animation sequence
+            setTimeout(() => {
+                document.body.classList.add('animation-complete');
+            }, 1000);
 
-    <footer class="footer">
-        <p>&copy; 2025 Designers Group. All Rights Reserved.</p>
-    </footer>
+            // Hamburger menu functionality
+            const hamburger = document.querySelector('.hamburger');
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    // Future menu toggle functionality
+                    console.log('Menu clicked');
+                });
+            }
+        });
+    </script>
 </body>
-<script>
-  window.addEventListener('load', () => {
-    const intro = document.getElementById('intro');
-    const designers = document.getElementById('intro-designers');
-    const group = document.getElementById('intro-group');
-    const hamburger = document.getElementById('hamburger');
-
-    // Sidebar
-    const sidebar = document.getElementById('sidebar');
-    const closeBtn = document.getElementById('close-btn');
-
-    // Animate intro
-    setTimeout(() => {
-      designers.classList.add('move');
-      group.classList.add('move');
-    }, 1000);
-
-    setTimeout(() => {
-      group.classList.add('fade');
-    }, 3000);
-
-    setTimeout(() => {
-      intro.style.display = 'none';
-      hamburger.classList.remove('hidden');
-      hamburger.classList.add('show');
-    }, 4000);
-
-    // Open sidebar
-    hamburger.addEventListener('click', () => {
-      sidebar.classList.remove('hidden');
-      sidebar.classList.add('open');
-    });
-
-    // Close sidebar
-    closeBtn.addEventListener('click', () => {
-      sidebar.classList.remove('open');
-      setTimeout(() => {
-        sidebar.classList.add('hidden');
-      }, 400); // after animation
-    });
-  });
-</script>
-
-<script>
-  window.addEventListener('load', () => {
-    const intro = document.getElementById('intro');
-    const designers = document.getElementById('intro-designers');
-    const group = document.getElementById('intro-group');
-    const hamburger = document.getElementById('hamburger');
-
-    // Step 1: Move both to corners + resize
-    setTimeout(() => {
-      designers.classList.add('move');
-      group.classList.add('move');
-    }, 1000);
-
-    // Step 2: Fade out "Group"
-    setTimeout(() => {
-      group.classList.add('fade');
-    }, 3000);
-
-    // Step 3: Remove intro and show hamburger
-    setTimeout(() => {
-      intro.style.display = 'none';
-      hamburger.classList.remove('hidden');
-      hamburger.classList.add('show');
-    }, 4000);
-  });
-</script>
-
-
-
-
-
-
-
 </html>

@@ -1,90 +1,34 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Designers Group Architecture</title>
-    <link rel="stylesheet" href="home.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Designers Group</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="intro-screen">
-        <div class="title-container">
-            <div class="designers">DESIGNERS</div>
-            <div class="group">GROUP</div>
-        </div>
-    </div>
+  <div id="intro">
+    <span id="designers">Designers</span>
+    <span id="group">Group</span>
+  </div>
+  <div id="main-content" style="display: none;">
+    <!-- Main homepage content here -->
+  </div>
 
-    <main class="main-content">
-        <header class="main-header">
-            <div class="tagline">EXCLUSIVE ARCHITECTURE SINCE 2008</div>
-            <div class="hamburger">
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-            </div>
-        </header>
+  <script>
+    window.addEventListener("load", () => {
+      const designers = document.getElementById("designers");
+      const group = document.getElementById("group");
+      const intro = document.getElementById("intro");
+      const mainContent = document.getElementById("main-content");
 
-        <section class="hero-section">
-            <h1 class="hero-title">We design spaces that inspire and transform</h1>
-            <p class="hero-description">
-                Our architectural philosophy combines functionality with aesthetics,
-                creating timeless structures that respect their environment while pushing boundaries.
-            </p>
-            <a href="#" class="view-projects">View Projects</a>
-        </section>
+      designers.classList.add("move-left");
+      group.classList.add("move-right");
 
-        <section class="featured-projects">
-            <div class="project-card">
-                <img src="https://placehold.co/1920x1080" alt="Modern concrete and glass residence with cantilevered volumes overlooking a forest valley" class="project-image">
-                <div class="project-info">
-                    <h3 class="project-title">Horizon House</h3>
-                    <p class="project-location">Switzerland</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="https://placehold.co/1920x1080" alt="Urban skyscraper with geometric facade patterns reflecting the city lights at dusk" class="project-image">
-                <div class="project-info">
-                    <h3 class="project-title">Nexus Tower</h3>
-                    <p class="project-location">New York</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="https://placehold.co/1920x1080" alt="Cultural center with fluid organic forms and a woven bamboo exterior" class="project-image">
-                <div class="project-info">
-                    <h3 class="project-title">Weave Center</h3>
-                    <p class="project-location">Bali</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="https://placehold.co/1920x1080" alt="Minimalist cliffside retreat with horizontal lines blending into the coastal landscape" class="project-image">
-                <div class="project-info">
-                    <h3 class="project-title">Edge Retreat</h3>
-                    <p class="project-location">California</p>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <p>© 2023 DESIGNERS GROUP. All rights reserved.</p>
-        </footer>
-    </main>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Start the animation sequence
-            setTimeout(() => {
-                document.body.classList.add('animation-complete');
-            }, 1000);
-
-            // Hamburger menu functionality
-            const hamburger = document.querySelector('.hamburger');
-            if (hamburger) {
-                hamburger.addEventListener('click', () => {
-                    // Future menu toggle functionality
-                    console.log('Menu clicked');
-                });
-            }
-        });
-    </script>
+      setTimeout(() => {
+        intro.style.display = "none";
+        mainContent.style.display = "block";
+      }, 4000); // Show home page after animation
+    });
+  </script>
 </body>
 </html>

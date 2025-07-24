@@ -1,18 +1,48 @@
-window.addEventListener('load', () => {
-  const designers = document.getElementById('intro-designers');
-  const group = document.getElementById('intro-group');
-  const intro = document.getElementById('intro');
-  const main = document.getElementById('main-content');
-  const hamburger = document.getElementById('hamburger-menu');
+// Mobile Navigation Toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-  setTimeout(() => {
-    designers.classList.add('move');
-    group.classList.add('move');
-  }, 1000); // wait 1s before moving
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
 
-  setTimeout(() => {
-    intro.style.display = 'none';
-    main.style.display = 'block';
-    hamburger.style.display = 'block'; // show hamburger
-  }, 3000); // after 3s
+// Smooth Scrolling for Anchor Links
+const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+for (let link of anchorLinks) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+        
+        // Close mobile menu after clicking a link
+        if (navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+        }
+    });
+}
+
+// Remove splash screen
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.querySelector('.splash-screen').remove();
+    }, 3000);
+});
+
+// Change navbar style on scroll
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
 });

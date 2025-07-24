@@ -1,62 +1,273 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Designers Group | Home</title>
-    <link rel="stylesheet" href="home.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumen | Bespoke Architecture</title>
+    <meta name="description" content="Modern architectural designs that redefine spaces">
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <img src="logo.png" alt="Designers Group Logo" class="logo" />
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
+
+  <div class="splash-screen">
+        <img src="logo.png" alt="Designers group Logo" class="splash-logo">
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo" aria-label="Lumen Architecture Studio">Lumen</a>
+            <ul class="nav-links">
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#studio">Studio</a></li>
+                <li><a href="#approach">Approach</a></li>
+                <li><a href="#insights">Insights</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+            <div class="menu-toggle" aria-label="Mobile menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Crafting Spaces that Inspire</h1>
-            <p>Premium architecture & interior design solutions by Designers Group</p>
-            <a href="#projects" class="btn">View Projects</a>
+            <div class="hero-text">
+                <h1>Architectural Alchemy</h1>
+                <p class="subtitle">Transforming space into experience since 2006</p>
+                <div class="hero-scroll">
+                    <span>Explore</span>
+                    <div class="scroll-icon"></div>
+                </div>
+            </div>
         </div>
+        <div class="hero-overlay"></div>
+        <img src="https://placehold.co/1920x1080" alt="Modern architectural masterpiece featuring cantilevered structure with floor-to-ceiling windows overlooking city skyline" loading="lazy"/>
     </section>
 
-    <section class="section" id="about">
+    <!-- Featured Project -->
+    <section id="featured" class="featured-project">
         <div class="container">
-            <h2>About Us</h2>
-            <p>Designers Group is a leading architectural firm specializing in modern, sustainable, and luxury architecture. Our philosophy is rooted in creativity, functionality, and harmony with nature.</p>
-        </div>
-    </section>
-
-    <section class="section" id="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Modern Villa</h3>
+            <div class="featured-content">
+                <div class="featured-text fade-in">
+                    <span class="section-label">Featured Project</span>
+                    <h2 class="project-title">Cliffside Retreat</h2>
+                    <p class="project-location">Big Sur, California</p>
+                    <p class="project-description">A harmonious blend of landscape and architecture, this residence appears to float above the Pacific coastline.</p>
+                    <a href="#" class="project-link">Case Study</a>
                 </div>
-                <div class="project-card">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3>Urban Office</h3>
-                </div>
-                <div class="project-card">
-                    <img src="project3.jpg" alt="Project 3">
-                    <h3>Luxury Residence</h3>
+                <div class="featured-image">
+                    <img src="https://placehold.co/800x1000" alt="Cliffside home with panoramic ocean views and minimalist concrete design" loading="lazy"/>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer" id="contact">
-        <p>&copy; 2025 Designers Group. All rights reserved.</p>
-        <p>Email: info@designersgroup.com | Phone: +91-98765-43210</p>
+    <!-- Projects Grid -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Selected Works</span>
+                <h2>Architectural Portfolio</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="image-overlay"></div>
+                        <img src="https://placehold.co/800x600" alt="Urban loft renovation with exposed brick and steel beams in New York" loading="lazy"/>
+                        <span class="project-year">2023</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>5th Avenue Loft</h3>
+                        <p class="project-location">New York, NY</p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="image-overlay"></div>
+                        <img src="https://placehold.co/800x600" alt="Contemporary museum with sculptural facade in Zurich" loading="lazy"/>
+                        <span class="project-year">2022</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Kunsthaus Expansion</h3>
+                        <p class="project-location">Zurich, Switzerland</p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="image-overlay"></div>
+                        <img src="https://placehold.co/800x600" alt="Solar-powered desert residence with rammed earth walls in Arizona" loading="lazy"/>
+                        <span class="project-year">2021</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Desert Oasis</h3>
+                        <p class="project-location">Tucson, AZ</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="view-all">
+                <a href="#" class="view-all-link">View Complete Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Studio -->
+    <section id="studio" class="studio-section">
+        <div class="container">
+            <div class="studio-content">
+                <div class="studio-image">
+                    <img src="https://placehold.co/600x800" alt="Lumen Architecture studio space featuring models and architectural drawings" loading="lazy"/>
+                </div>
+                <div class="studio-text">
+                    <span class="section-label">The Studio</span>
+                    <h2>Design Philosophy</h2>
+                    <p>Lumen Architecture was founded on the principle that light transforms space. Our international team of architects and designers create environments that engage with their context while advancing sustainable design practices.</p>
+                    <ul class="studio-list">
+                        <li><i class="fas fa-certificate"></i> AIA Gold Medal 2021</li>
+                        <li><i class="fas fa-certificate"></i> RIBA International Fellow</li>
+                        <li><i class="fas fa-certificate"></i> LEED Platinum Certified</li>
+                    </ul>
+                    <a href="#" class="studio-link">Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Approach -->
+    <section id="approach" class="approach-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Process</span>
+                <h2>Design Approach</h2>
+            </div>
+            
+            <div class="approach-steps">
+                <div class="step">
+                    <span class="step-number">01</span>
+                    <h3>Discovery</h3>
+                    <p>Deep dive into client needs and site characteristics to establish project parameters.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">02</span>
+                    <h3>Conceptualization</h3>
+                    <p>Development of spatial narratives through sketches, models, and renderings.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">03</span>
+                    <h3>Design Development</h3>
+                    <p>Refinement of materials, light studies, and technical detailing.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">04</span>
+                    <h3>Execution</h3>
+                    <p>Oversight of construction to ensure design integrity is maintained.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights -->
+    <section id="insights" class="insights-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Insights</span>
+                <h2>Perspectives</h2>
+            </div>
+            
+            <div class="insights-grid">
+                <article class="insight-card">
+                    <div class="insight-image">
+                        <img src="https://placehold.co/600x400" alt="Architect discussing sustainable materials at construction site" loading="lazy"/>
+                    </div>
+                    <div class="insight-text">
+                        <span class="insight-date">May 15, 2023</span>
+                        <h3>Materiality in Modern Design</h3>
+                        <p>Exploring the renaissance of natural materials in contemporary architecture.</p>
+                        <a href="#" class="insight-link">Read More</a>
+                    </div>
+                </article>
+
+                <article class="insight-card">
+                    <div class="insight-image">
+                        <img src="https://placehold.co/600x400" alt="Architectural model close-up showing intricate detailing" loading="lazy"/>
+                    </div>
+                    <div class="insight-text">
+                        <span class="insight-date">March 22, 2023</span>
+                        <h3>The Art of Scale</h3>
+                        <p>How model-making continues to shape our design process in the digital age.</p>
+                        <a href="#" class="insight-link">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-text">
+                    <span class="section-label">Collaborate</span>
+                    <h2>Start Your Project</h2>
+                    <p>Our studio welcomes commissions ranging from private residences to cultural institutions worldwide.</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 1432 Design Avenue, San Francisco, CA 94107</p>
+                        <p><i class="fas fa-envelope"></i> inquiries@lumenarch.com</p>
+                        <p><i class="fas fa-phone-alt"></i> +1 415-555-2020</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Project Type">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Tell us about your project"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Lumen</div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2023 Lumen Architecture. All rights reserved.
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script src="home.js"></script>
 </body>
 </html>

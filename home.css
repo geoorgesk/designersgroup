@@ -1,249 +1,135 @@
+/* style.css */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Segoe UI", sans-serif;
 }
 
 body {
-    overflow-x: hidden;
-    background-color: #000;
-    color: #fff;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Initial black screen */
-.intro-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #000;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #f57c00;
+}
+
+.hero {
+    background: url('hero-bg.jpg') center/cover no-repeat;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-}
-
-.title-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.designers, .group {
-    font-size: 5rem;
-    font-weight: 300;
-    letter-spacing: 0.5rem;
-    text-transform: uppercase;
+    text-align: center;
+    color: white;
     position: relative;
-    transition: all 2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.designers { color: #fff; }
-.group { color: #aaa; margin-top: 1rem; }
-
-/* Main content */
-.main-content {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1.5s ease-in-out 2.5s;
-    padding: 4rem;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 6rem;
-    padding-top: 6rem;
-}
-
-.hamburger {
-    width: 40px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    opacity: 0;
-    transform: translateX(20px);
-    transition: all 0.8s ease-in-out 3s;
-}
-
-.hamburger-line {
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
     width: 100%;
-    height: 2px;
-    background-color: #fff;
-    transition: all 0.3s ease;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
 }
 
-.hamburger:hover .hamburger-line:first-child {
-    transform: translateY(5px);
+.hero-content {
+    z-index: 2;
 }
 
-.hamburger:hover .hamburger-line:last-child {
-    transform: translateY(-5px);
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-.tagline {
-    font-size: 1rem;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
-    color: #666;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.8s ease-in-out 3.2s;
-}
-
-.hero-section {
-    margin-bottom: 8rem;
-}
-
-.hero-title {
-    font-size: 4.5rem;
-    font-weight: 300;
-    line-height: 1.2;
-    margin-bottom: 3rem;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 1s ease-in-out 3.5s;
-}
-
-.hero-description {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    max-width: 600px;
-    color: #aaa;
-    margin-bottom: 3rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 1s ease-in-out 3.7s;
-}
-
-.view-projects {
+.btn {
     display: inline-block;
-    padding: 1rem 2rem;
-    background-color: transparent;
-    border: 1px solid #fff;
-    color: #fff;
+    padding: 0.75rem 1.5rem;
+    background-color: #f57c00;
+    color: white;
+    border: none;
+    border-radius: 4px;
     text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 1s ease-in-out 3.9s;
+    transition: background-color 0.3s;
 }
 
-.view-projects:hover {
-    background-color: #fff;
-    color: #000;
+.btn:hover {
+    background-color: #e65c00;
 }
 
-.featured-projects {
+.section {
+    padding: 4rem 2rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin-top: 6rem;
+    margin-top: 2rem;
 }
 
 .project-card {
-    position: relative;
+    background: #fafafa;
+    border-radius: 8px;
     overflow: hidden;
-    height: 500px;
-    cursor: pointer;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.5s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
-.project-card:nth-child(1) { transition-delay: 4.2s; }
-.project-card:nth-child(2) { transition-delay: 4.4s; }
-.project-card:nth-child(3) { transition-delay: 4.6s; }
-.project-card:nth-child(4) { transition-delay: 4.8s; }
+.project-card:hover {
+    transform: translateY(-5px);
+}
 
-.project-image {
+.project-card img {
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
-    transition: transform 0.5s ease;
 }
 
-.project-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 2rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-    transform: translateY(100%);
-    transition: transform 0.5s ease;
+.project-card h3 {
+    padding: 1rem;
 }
 
-.project-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.project-location {
-    font-size: 0.9rem;
-    color: #aaa;
-}
-
-.project-card:hover .project-image {
-    transform: scale(1.05);
-}
-
-.project-card:hover .project-info {
-    transform: translateY(0);
-}
-
-footer {
-    margin-top: 10rem;
-    padding: 2rem 0;
+.footer {
     text-align: center;
-    color: #666;
-    font-size: 0.9rem;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 1s ease-in-out 5s;
-}
-
-/* Animation completed state */
-body.animation-complete .intro-screen {
-    pointer-events: none;
-}
-
-body.animation-complete .designers {
-    top: 30px;
-    left: 30px;
-    font-size: 1.2rem;
-    transform: translateY(0) !important;
-}
-
-body.animation-complete .group {
-    top: 30px;
-    right: 30px;
-    font-size: 0;
-    opacity: 0;
-}
-
-body.animation-complete .main-content {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-body.animation-complete .hamburger,
-body.animation-complete .tagline,
-body.animation-complete .hero-title,
-body.animation-complete .hero-description,
-body.animation-complete .view-projects,
-body.animation-complete .project-card,
-body.animation-complete footer {
-    opacity: 1;
-    transform: translateY(0) translateX(0);
+    padding: 2rem;
+    background-color: #f1f1f1;
+    color: #555;
 }

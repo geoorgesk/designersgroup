@@ -1,34 +1,62 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Designers Group</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Designers Group | Home</title>
+    <link rel="stylesheet" href="home.css" />
 </head>
 <body>
-  <div id="intro">
-    <span id="designers">Designers</span>
-    <span id="group">Group</span>
-  </div>
-  <div id="main-content" style="display: none;">
-    <!-- Main homepage content here -->
-  </div>
+    <header class="header">
+        <img src="logo.png" alt="Designers Group Logo" class="logo" />
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <script>
-    window.addEventListener("load", () => {
-      const designers = document.getElementById("designers");
-      const group = document.getElementById("group");
-      const intro = document.getElementById("intro");
-      const mainContent = document.getElementById("main-content");
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Crafting Spaces that Inspire</h1>
+            <p>Premium architecture & interior design solutions by Designers Group</p>
+            <a href="#projects" class="btn">View Projects</a>
+        </div>
+    </section>
 
-      designers.classList.add("move-left");
-      group.classList.add("move-right");
+    <section class="section" id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Designers Group is a leading architectural firm specializing in modern, sustainable, and luxury architecture. Our philosophy is rooted in creativity, functionality, and harmony with nature.</p>
+        </div>
+    </section>
 
-      setTimeout(() => {
-        intro.style.display = "none";
-        mainContent.style.display = "block";
-      }, 4000); // Show home page after animation
-    });
-  </script>
+    <section class="section" id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Modern Villa</h3>
+                </div>
+                <div class="project-card">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Urban Office</h3>
+                </div>
+                <div class="project-card">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Luxury Residence</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <p>&copy; 2025 Designers Group. All rights reserved.</p>
+        <p>Email: info@designersgroup.com | Phone: +91-98765-43210</p>
+    </footer>
 </body>
 </html>

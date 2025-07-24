@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Add new meta tags for better project showcase -->
+    <meta property="og:title" content="DG">
+    <meta property="og:description" content="Explore our exclusive architectural projects">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DESIGNERS GROUP</title>
+    <title>DG</title>
     <meta name="description" content="Modern architectural designs that redefine spaces">
     <link rel="stylesheet" href="home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <!-- Splash Screen -->
@@ -19,9 +20,8 @@
         <img src="logo.png" alt="DG" class="splash-logo">
     </div>
 
-
     <!-- Navigation -->
-    <nav class="navbar">
+     <nav class="navbar">
       <div class="nav-left">
     <img src="logo.png" alt="Logo" class="logo">
     <span class="brand-name">Designers Group</span>
@@ -31,9 +31,9 @@
             <ul class="nav-links">
               
 
-                <li><a href="project.html">Projects</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#studio">Studio</a></li>
-                <li><a href="#approach">Approach</a></li>
+                <li><a href="about.html">Approach</a></li>
                 <li><a href="#insights">Insights</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -43,20 +43,43 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Architectural Alchemy</h1>
-                <p class="subtitle">Transforming space into experience since 2006</p>
-                <div class="hero-scroll">
-                    <span>Explore</span>
-                    <div class="scroll-icon"></div>
+    <!-- Project Gallery Header -->
+    <section class="project-gallery-header">
+        <div class="container">
+            <h1>Our Architectural Legacy</h1>
+            <p class="subtitle">Exploring innovative designs across the globe</p>
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="cultural">Cultural</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Project Showcase -->
+    <section class="project-showcase">
+        <div class="container">
+            <div class="showcase-header">
+                <h1>Our Architectural Vision</h1>
+                <div class="view-controls">
+                    <button class="view-toggle active" data-view="grid"><i class="fas fa-th"></i> Grid</button>
+                    <button class="view-toggle" data-view="masonry"><i class="fas fa-th-large"></i> Masonry</button>
+                    <button class="view-toggle" data-view="carousel"><i class="fas fa-images"></i> Carousel</button>
+                </div>
+            </div>
+            
+            <div class="project-display" id="projectDisplay">
+                <!-- Projects will be loaded via JavaScript -->
+            </div>
+            
+            <div class="project-details-overlay" id="projectOverlay">
+                <div class="overlay-content">
+                    <button class="close-overlay">&times;</button>
+                    <div class="detail-content"></div>
                 </div>
             </div>
         </div>
-        <div class="hero-overlay"></div>
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2a4eaa15-3303-478a-b66d-0d69b22d85ba.png" alt="Modern architectural masterpiece featuring cantilevered structure with floor-to-ceiling windows overlooking city skyline" loading="lazy"/>
     </section>
 
     <!-- Featured Project -->
@@ -77,8 +100,8 @@
         </div>
     </section>
 
-    <!-- Projects Grid -->
-    <section id="projects" class="projects-section">
+    <!-- Interactive Project Browser -->
+    <section id="projects" class="interactive-projects">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Selected Works</span>
@@ -287,6 +310,42 @@
         </div>
     </footer>
 
-    <script src="home.js"></script>
+    <!-- Project Details Modal -->
+    <div class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-gallery"></div>
+            <div class="modal-info">
+                <h2 class="modal-title"></h2>
+                <div class="meta-data">
+                    <span class="location"></span>
+                    <span class="year"></span>
+                    <span class="type"></span>
+                </div>
+                <p class="description"></p>
+                <div class="project-specs">
+                    <h3>Specifications</h3>
+                    <ul class="specs-list"></ul>
+                </div>
+                <div class="modal-navigation">
+                    <button class="prev-project">Previous</button>
+                    <button class="next-project">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3D Model Viewer (WebGL) -->
+    <div class="model-viewer">
+        <canvas id="model-canvas"></canvas>
+        <button class="close-viewer">Close Viewer</button>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="js/project-manager.js"></script>
+    <script src="js/3d-viewer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+    <script src="js/filters.js"></script>
 </body>
 </html>
